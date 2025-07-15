@@ -7,79 +7,76 @@
 
 body, html {
   height: 100%;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  background-color: #0f1d3b;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f1d3b;
   color: #fff;
 }
 
-/* Contenedor general */
+/* Fondo con imagen centrada */
 .contenedor {
-  background-image: url("../static/img/logo\ cevicheria.jpg");
-  background-size: contain;
-  background-position: center top;
+  background-image: url("../static/img/logo\ cevicheria\ sin\ numero.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 60px;
-  padding-top: 50px;
 }
 
-/* Cuadro transparente encima del fondo */
-.contenido {
-  background-color: rgba(15, 29, 59, 0.8);
-  padding: 20px;
-  border-radius: 15px;
-  color: #fff;
+
+/* Caja principal */
+.caja {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 16px;
   text-align: center;
-  max-width: 380px;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  width: 90%;
+  max-width: 400px;
+  backdrop-filter: blur(3px);
 }
 
 /* Título */
-.contenido h1 {
-  font-size: 2rem;
-  font-weight: bold;
+.caja h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
   margin-bottom: 10px;
-  line-height: 1.3;
 }
 
-.contenido h1 span {
-  font-size: 2.3rem;
-  color: #00B8D9;
+
+.caja h1 span {
+  color: #f5b042;
 }
 
-/* Subtítulo dorado */
+/* Subtítulo */
 .subtitulo {
   font-size: 1rem;
-  margin: 10px 0 20px;
-  color: #f5b042;
-  font-weight: 600;
+  color: #cccccc;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
 /* Contacto */
 .contacto p {
-  margin: 4px 0;
   font-size: 0.95rem;
+  margin: 6px 0;
+  color: #dddddd;
 }
 
 /* Botón */
 .boton {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 22px;
+  margin-top: 25px;
+  padding: 10px 20px;
   background-color: #f5b042;
   color: #000;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 8px;
+  font-weight: 600;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: 0.2s ease-in-out;
 }
 
 .boton:hover {
   background-color: #ffc107;
-  color: #000;
+  transform: scale(1.05);
 }
