@@ -10,6 +10,10 @@ body, html {
   background-color: #0f1d3b;
   color: #fff;
   min-height: 100vh;
+  background-image: url("../static/img/alen-smola-0KAcfXBrtSU-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Contenedor principal */
@@ -27,14 +31,20 @@ body, html {
 .logo-contenedor {
   position: relative;
   display: inline-block;
+   background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+  padding: 10px;
+  border-radius: 12px;
 }
 
 .logo {
- width: 100%;
-  max-width: 400px; /* En móviles será 100%, pero en pantallas grandes se limita */
+   width: 100%;
+  max-width: 400px;
   height: auto;
+  border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   animation: fadeIn 0.8s ease-out;
+  opacity: 1;
+  filter: none;
 }
 
 /* Botón superpuesto sobre la imagen */
