@@ -18,12 +18,11 @@ body, html {
 
 /* Contenedor principal */
 .contenido-principal {
-  background-image: url("");
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Hace que tome toda la pantalla */
+  min-height: 100vh;
   padding: 20px;
   text-align: center;
 }
@@ -37,13 +36,13 @@ body, html {
 .logo-contenedor {
   position: relative;
   display: inline-block;
-   background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   border-radius: 12px;
 }
 
 .logo {
-   width: 100%;
+  width: 100%;
   max-width: 400px;
   height: auto;
   border-radius: 12px;
@@ -56,7 +55,7 @@ body, html {
 /* Botón superpuesto sobre la imagen */
 .boton-superpuesto {
   position: absolute;
-  bottom: 70px; /* Ajusta si quieres subirlo más */
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -76,7 +75,7 @@ body, html {
 }
 
 .boton-superpuesto i {
-  margin-right: 8px; /* Espacio entre ícono y texto */
+  margin-right: 8px;
   vertical-align: middle;
 }
 
@@ -94,46 +93,49 @@ body, html {
   font-weight: 400;
   letter-spacing: 0.5px;
 }
+
 .footer i {
-  margin-right: 10px; /* Espacio entre ícono y texto */
-  color: #f5b042;      /* Si quieres darle color a los íconos */
-  
+  margin-right: 10px;
+  color: #f5b042;
 }
+
 /* Animación suave */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Estilos para pantallas móviles */
 @media (max-width: 500px) {
-  .contenido-principal {
+  body, html {
+    min-height: auto;
     background-image: url("../static/img/fondo19.png");
-    background-size: cover; /* ancho completo, altura proporcional */
+    background-attachment: scroll;
+    background-size: contain;
     background-position: top center;
-    background-attachment: fixed;
-    padding: 30px 15px;
-    
-    
+    background-repeat: no-repeat;
   }
 
-  .boton-superpuesto {
-    position: absolute;
-  bottom: 40px; /* Elige una altura que funcione bien en todos los tamaños */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  background-color: #f5b042;
-  color: #000;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: 0.2s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  .contenido-principal {
+    min-height: auto;
+    padding: 20px 15px;
+    background-image: none;
   }
 
   .logo {
     max-width: 90%;
+  }
+
+  .boton-superpuesto {
+    bottom: 40px;
+    font-size: 0.95rem;
+    padding: 10px 20px;
   }
 
   .subtitulo {
@@ -145,19 +147,5 @@ body, html {
   .footer {
     font-size: 0.85rem;
     padding: 15px;
-  }
-}
-@media (max-width: 500px) {
-  body, html {
-    min-height: auto; /* 🔧 Evita espacio extra en vertical */
-    background-attachment: scroll; /* 🔧 Más compatible con móviles */
-    background-size: contain; /* 🔧 Ajusta mejor la imagen verticalmente */
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
-
-  .contenido-principal {
-    min-height: auto; /* Asegura que el contenido no empuje el footer hacia abajo */
-    padding: 20px 15px;
   }
 }
