@@ -37,7 +37,6 @@ body, html {
 .logo-contenedor {
   position: relative;
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   border-radius: 12px;
 }
@@ -87,7 +86,6 @@ body, html {
 
 /* Pie de página */
 .footer {
-  background-color: rgba(0, 0, 0, 0.5);
   color: #ccc;
   text-align: center;
   padding: 20px;
@@ -120,6 +118,10 @@ body, html {
     background-position: top center;
     background-attachment: scroll;
     padding: 30px 15px;
+    flex-grow: 1;
+    justify-content: flex-start;
+    min-height: auto;
+    height: auto;
   }
 
   .logo {
