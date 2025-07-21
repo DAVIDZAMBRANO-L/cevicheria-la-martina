@@ -22,7 +22,6 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   padding: 20px;
   text-align: center;
 }
@@ -145,7 +144,7 @@ body, html {
   }
 
   .footer {
-    font-size: 0.85rem;
+    margin-top: 20px;    font-size: 0.85rem;
     padding: 15px;
   }
 }
