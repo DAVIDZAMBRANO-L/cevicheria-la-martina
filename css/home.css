@@ -18,7 +18,7 @@ body, html {
 
 /* Contenedor principal */
 .contenido-principal {
-  
+  background-image: url("");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,9 +105,13 @@ body, html {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .contenido-principal {
+    background-size: contain; /* ancho completo, altura proporcional */
+    background-position: center top;
     padding: 30px 15px;
+    background-repeat: no-repeat;
+    
   }
 
   .boton-superpuesto {
