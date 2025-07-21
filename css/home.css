@@ -147,3 +147,17 @@ body, html {
     padding: 15px;
   }
 }
+@media (max-width: 500px) {
+  body, html {
+    min-height: auto; /* 🔧 Evita espacio extra en vertical */
+    background-attachment: scroll; /* 🔧 Más compatible con móviles */
+    background-size: contain; /* 🔧 Ajusta mejor la imagen verticalmente */
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .contenido-principal {
+    min-height: auto; /* Asegura que el contenido no empuje el footer hacia abajo */
+    padding: 20px 15px;
+  }
+}
