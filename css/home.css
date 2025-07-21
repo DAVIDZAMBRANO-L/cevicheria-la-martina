@@ -116,7 +116,7 @@ body, html {
     min-height: auto;
     background-image: url("../static/img/fondo19.png");
     background-attachment: scroll;
-    background-size: contain;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
   }
