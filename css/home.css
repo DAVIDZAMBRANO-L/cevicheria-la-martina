@@ -18,6 +18,7 @@ body, html {
 
 /* Contenedor principal */
 .contenido-principal {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +26,11 @@ body, html {
   min-height: 100vh; /* Hace que tome toda la pantalla */
   padding: 20px;
   text-align: center;
+}
+
+.contenido-principal > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Imagen centrada */
@@ -99,15 +105,25 @@ body, html {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .contenido-principal {
     padding: 30px 15px;
   }
 
   .boton-superpuesto {
-    font-size: 0.9rem;
-    padding: 8px 14px;
-    bottom: 20px;
+    position: absolute;
+  bottom: 40px; /* Elige una altura que funcione bien en todos los tamaños */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #f5b042;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
   .logo {
