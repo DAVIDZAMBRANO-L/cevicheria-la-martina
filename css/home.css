@@ -108,10 +108,11 @@ body, html {
 @media (max-width: 500px) {
   .contenido-principal {
     background-image: url("../static/img/fondo19.png");
-    background-size: contain; /* ancho completo, altura proporcional */
-    background-position: center top;
+    background-size: cover; /* ancho completo, altura proporcional */
+    background-position: top center;
+    background-attachment: fixed;
     padding: 30px 15px;
-    background-repeat: no-repeat;
+    
     
   }
 
