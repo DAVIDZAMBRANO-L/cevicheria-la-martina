@@ -10,18 +10,20 @@ body, html {
   background-color: #0f1d3b;
   color: #fff;
   min-height: 100vh;
+}
+
+/* Contenedor principal con fondo */
+.contenido-principal {
   background-image: url("../static/img/fondo18.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-/* Contenedor principal */
-.contenido-principal {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   padding: 20px;
   text-align: center;
 }
@@ -47,11 +49,9 @@ body, html {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   animation: fadeIn 0.8s ease-out;
-  opacity: 1;
-  filter: none;
 }
 
-/* Botón superpuesto sobre la imagen */
+/* Botón sobre la imagen */
 .boton-superpuesto {
   position: absolute;
   bottom: 70px;
@@ -78,6 +78,13 @@ body, html {
   vertical-align: middle;
 }
 
+.subtitulo {
+  font-size: 1rem;
+  color: #cccccc;
+  font-style: italic;
+  margin-top: 15px;
+}
+
 /* Pie de página */
 .footer {
   background-color: rgba(0, 0, 0, 0.5);
@@ -85,6 +92,7 @@ body, html {
   text-align: center;
   padding: 20px;
   font-size: 0.95rem;
+  margin-top: 20px; /* separa el footer del fondo */
 }
 
 .footer p {
@@ -100,31 +108,18 @@ body, html {
 
 /* Animación suave */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Estilos para pantallas móviles */
+/* Estilos para móviles */
 @media (max-width: 500px) {
-  body, html {
-    min-height: auto;
+  .contenido-principal {
     background-image: url("../static/img/fondo19.png");
-    background-attachment: scroll;
     background-size: cover;
     background-position: top center;
-    background-repeat: no-repeat;
-  }
-
-  .contenido-principal {
-    min-height: auto;
-    padding: 20px 15px;
-    background-image: none;
+    background-attachment: scroll;
+    padding: 30px 15px;
   }
 
   .logo {
@@ -137,14 +132,8 @@ body, html {
     padding: 10px 20px;
   }
 
-  .subtitulo {
-    font-size: 0.9rem;
-    text-align: center;
-    margin-top: 15px;
-  }
-
   .footer {
-    margin-top: 20px;    font-size: 0.85rem;
+    font-size: 0.85rem;
     padding: 15px;
   }
 }
