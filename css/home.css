@@ -49,6 +49,7 @@ html, body {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   animation: fadeIn 0.8s ease-out;
+  margin: 0 auto;
 }
 
 /* Botón sobre la imagen */
@@ -118,11 +119,17 @@ html, body {
   }
 
   .logo {
-    max-width: 90%;
+    width: 150%;
+  max-width: none;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+   
   }
 
   .boton-superpuesto {
-    bottom: 20px;
+    bottom: 45px;
     font-size: 0.85rem;
     padding: 10px 20px;
     white-space: nowrap;
