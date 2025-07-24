@@ -37,6 +37,9 @@ html, body {
   display: inline-block;
   padding: 10px;
   border-radius: 12px;
+  width: 30vw;  /* 30% del ancho de la pantalla */
+  max-width: 400px;
+  min-width: 200px;
 }
 
 .logo {
@@ -119,9 +122,12 @@ html, body {
   }
 
   .boton-superpuesto {
-    bottom: 40px;
-    font-size: 0.95rem;
+    bottom: 20px;
+    font-size: 0.85rem;
     padding: 10px 20px;
+    white-space: nowrap;
+    max-width: 80%;
+    text-align: center;
   }
 
   .footer {
