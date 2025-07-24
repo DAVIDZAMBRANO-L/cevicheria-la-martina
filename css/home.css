@@ -117,19 +117,23 @@ html, body {
     background-attachment: scroll;
     padding: 30px 15px;
   }
-
+.logo-contenedor {
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  margin: 0 auto;
+}
   .logo {
-    width: 150%;
-  max-width: none;
-  height: auto;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+    width: 80%;
+    max-width: none;
+    display: block;
+    margin: 0 auto;
+    animation: none;
    
   }
 
   .boton-superpuesto {
-    bottom: 45px;
+    bottom: 40px;
     font-size: 0.85rem;
     padding: 10px 20px;
     white-space: nowrap;
