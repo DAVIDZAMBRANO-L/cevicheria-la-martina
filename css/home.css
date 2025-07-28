@@ -102,6 +102,19 @@ html, body {
   color: #f5b042;
 }
 
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer a {
+  text-decoration: none !important; /* 👈 esto quita la línea abajo */
+  color: #f5b042;
+  display: inline-flex;
+  align-items: center;
+}
 /* Animación suave */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
